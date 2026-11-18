@@ -24,6 +24,7 @@ public class DepartamentoController {
 
     @GetMapping 
     public List<DepartamentoDto> findAll() {
+        System.out.println("Holaaaaaaaaa");
         return departamentoService.findAll().stream()
             .map(depto -> modelMapper.map(depto, DepartamentoDto.class))
             .toList();
